@@ -71,7 +71,6 @@ router.get('/users', authenticateUser, (req, res) => {
   });
 });
 
-
 // Route that creates a new user.
 router.post('/users', validators, (req, res) => {
   const errors = validationResult(req);
@@ -88,10 +87,5 @@ router.post('/users', validators, (req, res) => {
   users.push(user);
   res.status(201).end();
 });
-
-
-
-
-
 
 module.exports = router;
